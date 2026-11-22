@@ -1,0 +1,442 @@
+<!DOCTYPE html>
+<html lang="bn">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>MM WBCS ACADEMY 9732974125 WBPSC CLERKSHIP ONLINE MOCK TEST 7</title>
+  <style>
+    :root {
+      --primary: #1a73e8;
+      --success: #28a745;
+      --danger: #dc3545;
+      --dark: #202124;
+      --light: #f8f9fa;
+    }
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #f0f2f5;
+      color: var(--dark);
+    }
+    header {
+      background-color: var(--primary);
+      color: white;
+      padding: 15px 20px;
+      text-align: center;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    }
+    header h1 {
+      margin: 0;
+      font-size: 1.4rem;
+    }
+    .timer-bar {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      background: #e8f0fe;
+      padding: 10px 20px;
+      font-weight: bold;
+      color: #1967d2;
+      border-bottom: 1px solid #d2e3fc;
+    }
+    .container {
+      max-width: 900px;
+      margin: 20px auto;
+      padding: 20px;
+      background: white;
+      border-radius: 8px;
+      box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+    }
+    .login-box, .result-card {
+      max-width: 450px;
+      margin: 40px auto;
+      padding: 25px;
+      background: white;
+      border-radius: 8px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+      text-align: center;
+    }
+    .form-group {
+      margin-bottom: 15px;
+      text-align: left;
+    }
+    .form-group label {
+      display: block;
+      margin-bottom: 5px;
+      font-weight: 600;
+    }
+    .form-group input {
+      width: 100%;
+      padding: 10px;
+      box-sizing: border-box;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+    }
+    button {
+      background-color: var(--primary);
+      color: white;
+      border: none;
+      padding: 12px 20px;
+      font-size: 16px;
+      border-radius: 4px;
+      cursor: pointer;
+      width: 100%;
+      margin-top: 10px;
+    }
+    button:hover {
+      opacity: 0.9;
+    }
+    .question-card {
+      margin-bottom: 25px;
+      padding: 15px;
+      border: 1px solid #e0e0e0;
+      border-radius: 6px;
+      background: #fafafa;
+    }
+    .question-title {
+      font-size: 1.1rem;
+      font-weight: 600;
+      margin-bottom: 10px;
+      white-space: pre-line;
+    }
+    .options-list {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+    }
+    .options-list li {
+      margin-bottom: 8px;
+    }
+    .options-list label {
+      display: block;
+      padding: 10px 12px;
+      border: 1px solid #ddd;
+      border-radius: 4px;
+      background: white;
+      cursor: pointer;
+      transition: background 0.2s;
+    }
+    .options-list input[type="radio"] {
+      margin-right: 10px;
+    }
+    /* Preview Mode Styling */
+    .preview-mode .correct-ans {
+      color: var(--success) !important;
+      font-weight: bold;
+      border-color: var(--success) !important;
+      background-color: #d4edda !important;
+    }
+    .preview-mode .wrong-ans {
+      color: var(--danger) !important;
+      font-weight: bold;
+      border-color: var(--danger) !important;
+      background-color: #f8d7da !important;
+    }
+    .hidden {
+      display: none;
+    }
+    .summary-table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 15px 0;
+    }
+    .summary-table td, .summary-table th {
+      border: 1px solid #ddd;
+      padding: 8px;
+      text-align: left;
+    }
+    .preview-header-banner {
+      background: #e8f0fe;
+      padding: 15px;
+      border-radius: 6px;
+      margin-bottom: 20px;
+      font-weight: bold;
+      display: none;
+    }
+    .preview-mode .preview-header-banner {
+      display: block;
+    }
+    @media print {
+      header, .timer-bar, .no-print {
+        display: none !important;
+      }
+      body {
+        background: white;
+      }
+      .container {
+        box-shadow: none;
+        max-width: 100%;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>MM WBCS ACADEMY 9732974125 WBPSC CLERKSHIP ONLINE MOCK TEST 7</h1>
+  </header>
+
+  <!-- Login Section -->
+  <div id="login-section" class="login-box">
+    <h2>Student Login</h2>
+    <div class="form-group">
+      <label for="student-phone">Mobile number</label>
+      <input type="tel" id="student-phone" placeholder="Enter 10-digit mobile number">
+    </div>
+    <div class="form-group">
+      <label for="student-name">Full Name (For Record)</label>
+      <input type="text" id="student-name" placeholder="Enter your full name">
+    </div>
+    <button onclick="startExam()">Verify & Start Test</button>
+    <p id="login-error" style="color: red; margin-top: 10px;"></p>
+  </div>
+
+  <!-- Test & Preview Container -->
+  <div id="test-section" class="hidden">
+    <div class="timer-bar no-print">
+      <span id="user-display"></span>
+      <span>Time Remaining: <span id="timer">50:00</span></span>
+    </div>
+    <div class="container">
+      <div id="preview-banner" class="preview-header-banner">
+        Student Name: <span id="preview-student-name"></span> | Mobile: <span id="preview-student-phone"></span>
+        <button onclick="window.print()" style="margin-top: 10px; background-color: #28a745; width: auto; padding: 8px 16px;">Download / Print Preview</button>
+      </div>
+      <form id="quiz-form">
+        <div id="questions-container"></div>
+        <button type="button" id="submit-btn" onclick="submitExam()" class="no-print" style="margin-top: 20px;">Submit Test</button>
+      </form>
+    </div>
+  </div>
+
+  <!-- Result Summary Section -->
+  <div id="result-section" class="hidden">
+    <div class="result-card">
+      <h2>Test Result Summary</h2>
+      <table class="summary-table">
+        <tr><th>Student Name</th><td id="res-name"></td></tr>
+        <tr><th>Mobile Number</th><td id="res-phone"></td></tr>
+        <tr><th>Total Questions</th><td id="res-total"></td></tr>
+        <tr><th>Correct Answers (+1)</th><td id="res-correct" style="color: green; font-weight: bold;"></td></tr>
+        <tr><th>Wrong Answers (-0.25)</th><td id="res-wrong" style="color: red; font-weight: bold;"></td></tr>
+        <tr><th>Unattempted</th><td id="res-unattempted"></td></tr>
+        <tr><th>Final Score</th><td id="res-score" style="font-size: 1.2rem; font-weight: bold;"></td></tr>
+      </table>
+      <button onclick="enablePreview()" class="no-print">Preview Answers & Download</button>
+    </div>
+  </div>
+
+  <script>
+    // Configuration - Replace with your new Web App URL after deployment
+    const APP_SCRIPT_URL = "https://script.google.com/macros/s/AKfycbxIdnc4bxTmWzN3P4vhJW5JP3OBeaLAwOLU-ByTbHAxZCdJ2bXTLG8BR37h6-OpJyQo/exec";
+
+    const questions = [
+      { id: 1, q: "শিশুর বিকাশের ক্ষেত্রে “বিকাশের পূর্বানুমেয় ধারা” বলতে কী বোঝায়?", options: ["A. সব শিশু একই সময়ে একই দক্ষতা অর্জন করে", "B. বিকাশের কিছু সাধারণ ক্রম ও ধারা লক্ষ্য করা যায়", "C. বিকাশ শুধুমাত্র বংশগতির দ্বারা নির্ধারিত হয়", "D. বিকাশ শুধুমাত্র বিদ্যালয়ে ঘটে"], ans: "B" },
+      { id: 2, q: "একটি শিশুর ভাষাগত বিকাশ দ্রুত হলেও তার সামাজিক দক্ষতা তুলনামূলকভাবে ধীরে বিকশিত হচ্ছে। এটি কী নির্দেশ করে?", options: ["A. বিকাশের সব ক্ষেত্র একই গতিতে ঘটে", "B. বিকাশের বিভিন্ন ক্ষেত্রের গতি ভিন্ন হতে পারে", "C. শিশুটির কোনো বিকাশ ঘটছে না", "D. ভাষা বিকাশ সামাজিক বিকাশকে সম্পূর্ণভাবে নির্ধারণ করে"], ans: "B" },
+      { id: 3, q: "একজন শিশু বাড়িতে বড়দের সঙ্গে কথা বলার সময় ভদ্রভাবে মত প্রকাশ করতে শেখে এবং পরে বিদ্যালয়ে একই আচরণ করে। এটি কোন ধারণার উদাহরণ?", options: ["A. সামাজিকীকরণের স্থানান্তর", "B. শারীরিক পরিপক্বতা", "C. Classical conditioning", "D. Cognitive conflict"], ans: "A" },
+      { id: 4, q: "সহপাঠীদের সঙ্গে দলগত খেলায় অংশগ্রহণের মাধ্যমে শিশু প্রধানত কী শিখতে পারে?", options: ["A. শুধুমাত্র তথ্য মুখস্থ করা", "B. সহযোগিতা, নিয়ম মেনে চলা ও পারস্পরিক সম্পর্ক", "C. শুধুমাত্র শারীরিক বৃদ্ধি", "D. শুধুমাত্র লিখন দক্ষতা"], ans: "B" },
+      { id: 5, q: "Behaviorism-এর দৃষ্টিভঙ্গিতে শিক্ষক কোনো কাঙ্ক্ষিত আচরণের পর সঙ্গে সঙ্গে প্রশংসা করলে তার উদ্দেশ্য কী?", options: ["A. আচরণকে দুর্বল করা", "B. কাঙ্ক্ষিত আচরণের পুনরাবৃত্তির সম্ভাবনা বৃদ্ধি করা", "C. শিক্ষার্থীর পূর্বজ্ঞান মুছে ফেলা", "D. শিক্ষার্থীর চিন্তন বন্ধ করা"], ans: "B" },
+      { id: 6, q: "Cognitivism অনুযায়ী কোনো শিক্ষার্থী নতুন তথ্যকে পূর্বে শেখা তথ্যের সঙ্গে সম্পর্কিত করে মনে রাখছে। এখানে কোন প্রক্রিয়াটি গুরুত্বপূর্ণ?", options: ["A. তথ্যের মানসিক সংগঠন", "B. শুধুমাত্র শারীরিক অনুকরণ", "C. শুধুমাত্র পুরস্কার", "D. শুধুমাত্র শাস্তি"], ans: "A" },
+      { id: 7, q: "একজন শিক্ষক একটি সমস্যার সরাসরি উত্তর না দিয়ে শিক্ষার্থীদের পূর্বজ্ঞান ব্যবহার করে বিভিন্ন সম্ভাব্য সমাধান খুঁজতে দেন। এটি কোন পদ্ধতির উদাহরণ?", options: ["A. Behaviorism", "B. Constructivism", "C. Classical conditioning", "D. Maturationism"], ans: "B" },
+      { id: 8, q: "পিয়াজের মতে, একটি শিশু যদি বুঝতে পারে যে একটি কাঠির দৈর্ঘ্য তার অবস্থান পরিবর্তন করলেও একই থাকে, তবে এটি কোন ধারণার সঙ্গে সম্পর্কিত?", options: ["A. Conservation", "B. Egocentrism", "C. Animism", "D. Centration"], ans: "A" },
+      { id: 9, q: "পিয়াজের মতে, formal operational stage-এ শিক্ষার্থীরা কোন ধরনের চিন্তনে সক্ষম হয়?", options: ["A. শুধুমাত্র ইন্দ্রিয়নির্ভর অনুসন্ধান", "B. শুধুমাত্র দৃশ্যমান বস্তুর ওপর নির্ভরশীল চিন্তা", "C. বিমূর্ত ধারণা ও সম্ভাব্য পরিস্থিতি নিয়ে চিন্তা", "D. শুধুমাত্র অনুকরণমূলক শেখা"], ans: "C" },
+      { id: 10, q: "Vygotsky-এর মতে, একজন শিক্ষক যদি শিক্ষার্থীকে প্রথমে যথেষ্ট সহায়তা দেন এবং পরে ধীরে ধীরে সেই সহায়তা প্রত্যাহার করেন, তাহলে এটি কী নির্দেশ করে?", options: ["A. Scaffolding", "B. Punishment", "C. Rote learning", "D. Conditioning"], ans: "A" },
+      { id: 11, q: "Vygotsky-এর মতে, শিশুর চিন্তন বিকাশে ভাষার ভূমিকা বোঝার জন্য কোন বিষয়টি বিশেষ গুরুত্বপূর্ণ?", options: ["A. ভাষা সামাজিক মিথস্ক্রিয়ার মাধ্যমে বিকশিত হয়", "B. ভাষা শুধুমাত্র জৈবিক পরিপক্বতার ফল", "C. ভাষা শেখার জন্য সামাজিক যোগাযোগের প্রয়োজন নেই", "D. ভাষা শুধুমাত্র মুখস্থ করার মাধ্যমে শেখা যায়"], ans: "A" },
+      { id: 12, q: "Kohlberg-এর মতে, কোনো শিশু যদি অন্যদের অনুমোদন পাওয়ার জন্য ভালো আচরণ করে, তবে এটি কোন orientation-এর সঙ্গে সম্পর্কিত?", options: ["A. Punishment and obedience", "B. Instrumental purpose", "C. Good boy–good girl", "D. Universal ethical principle"], ans: "C" },
+      { id: 13, q: "Bandura-এর সামাজিক শিক্ষণ তত্ত্বে “model” বলতে কী বোঝায়?", options: ["A. যে ব্যক্তির আচরণ পর্যবেক্ষণ করে অন্যরা শিখতে পারে", "B. একটি লিখিত পরীক্ষার কাঠামো", "C. একটি শাস্তিমূলক পদ্ধতি", "D. একটি পাঠ্যবই"], ans: "A" },
+      { id: 14, q: "একজন শিক্ষক লক্ষ্য করলেন যে একজন শিক্ষার্থী মৌখিক আলোচনায় ভালো, কিন্তু লিখিত কাজে বেশি সময় নেয়। শিক্ষকের উপযুক্ত দৃষ্টিভঙ্গি কী হওয়া উচিত?", options: ["A. তাকে কম মেধাবী হিসেবে চিহ্নিত করা", "B. individual differences বিবেচনা করা", "C. তাকে সব কার্যক্রম থেকে বাদ দেওয়া", "D. শুধুমাত্র লিখিত পরীক্ষার ওপর নির্ভর করা"], ans: "B" },
+      { id: 15, q: "একজন শিক্ষার্থী স্থানিক বিন্যাস, মানচিত্র ও নকশা বুঝতে বিশেষ দক্ষ। Gardner-এর তত্ত্ব অনুযায়ী এটি কোন intelligence-এর সঙ্গে সম্পর্কিত?", options: ["A. Linguistic intelligence", "B. Spatial intelligence", "C. Musical intelligence", "D. Interpersonal intelligence"], ans: "B" },
+      { id: 16, q: "দৃষ্টিপ্রতিবন্ধী শিক্ষার্থীকে একই পাঠে সক্রিয়ভাবে অংশগ্রহণের সুযোগ দিতে কোন ব্যবস্থা সবচেয়ে উপযুক্ত?", options: ["A. তাকে শ্রেণিকক্ষের বাইরে রাখা", "B. শুধুমাত্র বোর্ডের লেখা পড়তে বলা", "C. শ্রুতিনির্ভর উপকরণ ও accessible learning material ব্যবহার করা", "D. তাকে পরীক্ষায় অংশগ্রহণ না করতে দেওয়া"], ans: "C" },
+      { id: 17, q: "একজন শিক্ষক শিক্ষার্থীদের একটি বাস্তব সমস্যা দেন এবং তাদের নিজেরা প্রশ্ন তৈরি করে সমাধান খুঁজতে বলেন। এই পদ্ধতিতে শিক্ষক প্রধানত কী ভূমিকা পালন করেন?", options: ["A. Controller", "B. Facilitator", "C. Dictator", "D. Passive observer"], ans: "B" },
+      { id: 18, q: "একটি শ্রেণিতে শিক্ষক একই ধারণা বোঝাতে উদাহরণ, আলোচনা, কার্যক্রম ও বাস্তব বস্তু ব্যবহার করেন। এটি কোন নীতিকে সমর্থন করে?", options: ["A. একমাত্রিক শিক্ষণ", "B. বহুমাত্রিক শিক্ষণ", "C. শুধুমাত্র rote learning", "D. শুধুমাত্র lecture method"], ans: "B" },
+      { id: 19, q: "শিক্ষক একটি lesson শেষ করার পর একটি “exit ticket” ব্যবহার করে শিক্ষার্থীরা কী বুঝেছে তা যাচাই করেন। এর প্রধান উদ্দেশ্য কী?", options: ["A. চূড়ান্ত ranking তৈরি করা", "B. শিক্ষার্থীর তাৎক্ষণিক শেখার অবস্থা বোঝা", "C. certificate প্রদান করা", "D. বিদ্যালয়ের ফলাফল প্রকাশ করা"], ans: "B" },
+      { id: 20, q: "একটি শিক্ষার্থী একই ধরনের ভুল বারবার করছে। শিক্ষক তার উত্তরগুলির pattern বিশ্লেষণ করে পরবর্তী lesson পরিকল্পনা করেন। এটি কী ধরনের মূল্যায়ন-ব্যবহারের উদাহরণ?", options: ["A. Diagnostic use of assessment", "B. Summative certification", "C. Norm-referenced ranking", "D. Competitive testing"], ans: "A" },
+      { id: 21, q: "একজন শিক্ষার্থী নিজের পড়াশোনার সময় ব্যবস্থাপনা নিয়ে সমস্যায় রয়েছে। Guidance-এর ক্ষেত্রে শিক্ষক প্রথমে কী করবেন?", options: ["A. তার হয়ে সম্পূর্ণ সময়সূচি তৈরি করে দেবেন", "B. তার সমস্যা ও বর্তমান অভ্যাস বুঝতে সাহায্য করবেন", "C. তাকে শাস্তি দেবেন", "D. অন্য শিক্ষার্থীর সঙ্গে তুলনা করবেন"], ans: "B" },
+      { id: 22, q: "Counseling-এর ক্ষেত্রে “active listening” বলতে কী বোঝায়?", options: ["A. শিক্ষার্থীর কথা না শুনে উপদেশ দেওয়া", "B. মনোযোগ দিয়ে শুনে শিক্ষার্থীর বক্তব্য বোঝার চেষ্টা করা", "C. শুধু লিখিত উত্তর নেওয়া", "D. শিক্ষার্থীর হয়ে সিদ্ধান্ত নেওয়া"], ans: "B" },
+      { id: 23, q: "একজন শিক্ষার্থী কোনো প্রশ্নের উত্তর দেওয়ার আগে নিজের চিন্তার ধাপগুলো পরীক্ষা করে। এটি কোন দক্ষতার উদাহরণ?", options: ["A. Metacognition", "B. Imitation", "C. Conditioning", "D. Rote memory"], ans: "A" },
+      { id: 24, q: "শিক্ষক একটি কাজের জন্য একাধিক গ্রহণযোগ্য সমাধানকে স্বীকৃতি দেন। এই practice কোন দক্ষতার বিকাশে সহায়ক?", options: ["A. Convergent thinking only", "B. Divergent thinking", "C. Mechanical memorisation", "D. Passive learning"], ans: "B" },
+      { id: 25, q: "শিক্ষার্থীদের নিজস্ব অভিজ্ঞতা থেকে উদাহরণ দিতে বললে শিক্ষণ প্রক্রিয়ায় প্রধানত কী ঘটে?", options: ["A. নতুন জ্ঞান পূর্বঅভিজ্ঞতার সঙ্গে যুক্ত হয়", "B. মুখস্থবিদ্যা বাধ্যতামূলক হয়", "C. শিক্ষকই একমাত্র জ্ঞানের উৎস থাকেন", "D. শিক্ষার্থীর অংশগ্রহণ কমে যায়"], ans: "A" },
+      { id: 26, q: "‘মহোৎসব’ শব্দটির সন্ধিবিচ্ছেদ কোনটি?", options: ["A. মহা + উৎসব", "B. মহ + উৎসব", "C. মহৎ + উৎসব", "D. মহো + উৎসব"], ans: "A" },
+      { id: 27, q: "‘কাঁথা’ শব্দটি কোন শ্রেণির শব্দ?", options: ["A. তৎসম", "B. তদ্ভব", "C. বিদেশি", "D. পারিভাষিক"], ans: "B" },
+      { id: 28, q: "‘প্রতিদিন’ শব্দে কোন উপসর্গ ব্যবহৃত হয়েছে?", options: ["A. প্রতি", "B. পরি", "C. প্র", "D. উপ"], ans: "A" },
+      { id: 29, q: "‘লেখক’ শব্দে ‘ক’ কী?", options: ["A. তদ্ধিত প্রত্যয়", "B. কৃৎ প্রত্যয়", "C. উপসর্গ", "D. বিভক্তি"], ans: "B" },
+      { id: 30, q: "‘রাজপথ’ শব্দটির সমাস নির্ণয় করুন।", options: ["A. দ্বন্দ্ব সমাস", "B. ষষ্ঠী তৎপুরুষ সমাস", "C. কর্মধারয় সমাস", "D. বহুব্রীহি সমাস"], ans: "B" },
+      { id: 31, q: "‘রিমা ভাইকে বই দিল’— বাক্যে ‘ভাইকে’ কোন কারক?", options: ["A. কর্তৃকারক", "B. কর্মকারক", "C. সম্প্রদান কারক", "D. অধিকরণ কারক"], ans: "C" },
+      { id: 32, q: "‘পাখি খাঁচা থেকে বেরিয়ে গেল’— বাক্যে ‘খাঁচা থেকে’ কোন কারক?", options: ["A. করণকারক", "B. অপাদান কারক", "C. অধিকরণ কারক", "D. সম্প্রদান কারক"], ans: "B" },
+      { id: 33, q: "‘চিঠিটি ডাকপিয়নের দ্বারা আনা হয়েছে’— বাক্যটি কোন বাচ্যের উদাহরণ?", options: ["A. কর্তৃবাচ্য", "B. কর্মবাচ্য", "C. ভাববাচ্য", "D. কর্তৃ-কর্মবাচ্য"], ans: "B" },
+      { id: 34, q: "‘তারা আগামীকাল প্রতিযোগিতায় অংশ নেবে’— বাক্যটির ক্রিয়ার কাল কী?", options: ["A. সাধারণ বর্তমান", "B. সাধারণ অতীত", "C. সাধারণ ভবিষ্যৎ", "D. ঘটমান বর্তমান"], ans: "C" },
+      { id: 35, q: "‘যদি তুমি মন দিয়ে পড়ো, তবে তুমি সফল হবে’— বাক্যটি কোন ধরনের?", options: ["A. সরল বাক্য", "B. যৌগিক বাক্য", "C. জটিল বাক্য", "D. বিস্ময়সূচক বাক্য"], ans: "C" },
+      { id: 36, q: "বাংলা ভাষা শিক্ষায় শিক্ষার্থীদের ভুলকে বিশ্লেষণ করার প্রধান উদ্দেশ্য কী?", options: ["A. শিক্ষার্থীকে শাস্তি দেওয়া", "B. শিক্ষার্থীর শেখার প্রক্রিয়া ও অসুবিধা বোঝা", "C. শিক্ষার্থীর নম্বর কমানো", "D. মুখস্থবিদ্যা বৃদ্ধি করা"], ans: "B" },
+      { id: 37, q: "একটি বাংলা গল্প পড়ানোর সময় শিক্ষক শিক্ষার্থীদের চরিত্রগুলির সিদ্ধান্ত নিয়ে যুক্তি দিতে বলেন। এই কার্যক্রমটি প্রধানত কোন দক্ষতা বিকাশ করে?", options: ["A. শুধুমাত্র বানান", "B. সমালোচনামূলক চিন্তা ও পাঠ-বোধ", "C. শুধুমাত্র হাতের লেখা", "D. শুধুমাত্র ব্যাকরণ"], ans: "B" },
+      { id: 38, q: "বাংলা ভাষার লেখার দক্ষতা বিকাশে কোন কার্যক্রমটি সবচেয়ে কার্যকর?", options: ["A. শুধু বই থেকে বাক্য নকল করা", "B. নিজের অভিজ্ঞতা নিয়ে ছোট অনুচ্ছেদ লেখা", "C. শুধু ব্যাকরণ মুখস্থ করা", "D. শুধু বানান তালিকা পড়া"], ans: "B" },
+      { id: 39, q: "প্রাথমিক স্তরে বাংলা ভাষা শেখানোর সময় শিক্ষক যদি শিক্ষার্থীদের কথ্য ভাষা থেকে প্রমিত ভাষার দিকে ধীরে ধীরে নিয়ে যান, তাহলে এর প্রধান সুবিধা কী?", options: ["A. শিক্ষার্থীর ভাষাগত অভিজ্ঞতার সঙ্গে নতুন ভাষার যোগসূত্র তৈরি হয়", "B. মাতৃভাষা সম্পূর্ণ নিষিদ্ধ হয়", "C. শুধুমাত্র পরীক্ষামুখী শিক্ষা হয়", "D. শিক্ষার্থীর মৌখিক অংশগ্রহণ কমে যায়"], ans: "A" },
+      { id: 40, q: "একটি কবিতা পড়ানোর আগে শিক্ষক শিক্ষার্থীদের কবিতার শিরোনাম দেখে সম্ভাব্য বিষয় অনুমান করতে বলেন। এটি কোন শিক্ষণ কৌশলের উদাহরণ?", options: ["A. Prediction", "B. Dictation", "C. Copying", "D. Rote memorisation"], ans: "A" },
+      { id: 41, q: "Choose the synonym of “Diligent”.", options: ["A. Lazy", "B. Industrious", "C. Careless", "D. Negligent"], ans: "B" },
+      { id: 42, q: "Choose the antonym of “Fragile”.", options: ["A. Delicate", "B. Weak", "C. Sturdy", "D. Breakable"], ans: "C" },
+      { id: 43, q: "Choose the correct one-word substitution for “A person who cannot read or write”.", options: ["A. Literate", "B. Illiterate", "C. Scholar", "D. Graduate"], ans: "B" },
+      { id: 44, q: "Choose the correct meaning of the phrasal verb “carry out”.", options: ["A. To cancel", "B. To perform or complete", "C. To postpone", "D. To hide"], ans: "B" },
+      { id: 45, q: "Choose the correct meaning of the idiom “Break the ice”.", options: ["A. To create a serious problem", "B. To start a friendly conversation", "C. To end a relationship", "D. To avoid communication"], ans: "B" },
+      { id: 46, q: "Identify the error in the sentence: “Neither of the answers are correct.”", options: ["A. Neither", "B. answers", "C. are", "D. correct"], ans: "C" },
+      { id: 47, q: "Choose the correct improvement: “She is capable to solve the problem.”", options: ["A. She is capable of solving the problem.", "B. She is capable for solve the problem.", "C. She is capable to solving the problem.", "D. She is capable with solving the problem."], ans: "A" },
+      { id: 48, q: "Fill in the blank: “The students were divided ___ four groups.”", options: ["A. in", "B. into", "C. by", "D. with"], ans: "B" },
+      { id: 49, q: "Choose the correct sentence for an English classroom where the teacher wants learners to use language meaningfully.", options: ["A. Learners only memorise word lists.", "B. Learners complete a real-life information exchange using English.", "C. Learners copy the same paragraph repeatedly.", "D. Learners translate every sentence mechanically."], ans: "B" },
+      { id: 50, q: "A teacher gives learners a short text and asks them to identify the writer’s implied message. This activity mainly assesses:", options: ["A. Inferential reading", "B. Handwriting", "C. Spelling only", "D. Pronunciation only"], ans: "A" }
+    ];
+
+    let currentStudent = { name: "", phone: "" };
+    let timerInterval;
+    let timeRemaining = questions.length * 60; // 1 min per question (50 mins)
+
+    async function startExam() {
+      const phone = document.getElementById("student-phone").value.trim();
+      const name = document.getElementById("student-name").value.trim() || "Student";
+      const errorEl = document.getElementById("login-error");
+
+      if (!phone) {
+        errorEl.textContent = "Please enter your mobile number.";
+        return;
+      }
+
+      errorEl.textContent = "Verifying mobile number...";
+
+      try {
+        const response = await fetch(`${APP_SCRIPT_URL}?action=verify&phone=${phone}`);
+        const result = await response.json();
+
+        if (result.success) {
+          currentStudent = { name, phone };
+          document.getElementById("login-section").classList.add("hidden");
+          document.getElementById("test-section").classList.remove("hidden");
+          document.getElementById("user-display").textContent = `Student: ${name} (${phone})`;
+          document.getElementById("preview-student-name").textContent = name;
+          document.getElementById("preview-student-phone").textContent = phone;
+          renderQuestions();
+          startTimer();
+        } else {
+          errorEl.textContent = result.message;
+        }
+      } catch (err) {
+        errorEl.textContent = "Error connecting to the whitelist server. Please verify your Web App URL.";
+      }
+    }
+
+    function renderQuestions() {
+      const container = document.getElementById("questions-container");
+      container.innerHTML = questions.map(q => `
+        <div class="question-card" id="q-card-${q.id}">
+          <div class="question-title">${q.id}. ${q.q}</div>
+          <ul class="options-list">
+            ${q.options.map((opt, idx) => {
+              const optVal = String.fromCharCode(65 + idx);
+              return `
+                <li>
+                  <label id="lbl-${q.id}-${optVal}">
+                    <input type="radio" name="q_${q.id}" value="${optVal}">
+                    ${opt}
+                  </label>
+                </li>
+              `;
+            }).join("")}
+          </ul>
+        </div>
+      `).join("");
+    }
+
+    function startTimer() {
+      timerInterval = setInterval(() => {
+        timeRemaining--;
+        const mins = Math.floor(timeRemaining / 60);
+        const secs = timeRemaining % 60;
+        document.getElementById("timer").textContent = `${mins.toString().padStart(2, '0')}:${secs.toString().padStart(2, '0')}`;
+
+        if (timeRemaining <= 0) {
+          clearInterval(timerInterval);
+          submitExam();
+        }
+      }, 1000);
+    }
+
+    function submitExam() {
+      clearInterval(timerInterval);
+
+      let correct = 0;
+      let wrong = 0;
+      let unattempted = 0;
+
+      questions.forEach(q => {
+        const selected = document.querySelector(`input[name="q_${q.id}"]:checked`);
+        if (selected) {
+          if (selected.value === q.ans) {
+            correct++;
+          } else {
+            wrong++;
+          }
+        } else {
+          unattempted++;
+        }
+      });
+
+      const score = (correct * 1) - (wrong * 0.25);
+
+      document.getElementById("res-name").textContent = currentStudent.name;
+      document.getElementById("res-phone").textContent = currentStudent.phone;
+      document.getElementById("res-total").textContent = questions.length;
+      document.getElementById("res-correct").textContent = correct;
+      document.getElementById("res-wrong").textContent = wrong;
+      document.getElementById("res-unattempted").textContent = unattempted;
+      document.getElementById("res-score").textContent = score.toFixed(2);
+
+      // Save Data to Google Sheet
+      fetch(APP_SCRIPT_URL, {
+        method: "POST",
+        mode: "no-cors",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({
+          name: currentStudent.name,
+          phone: currentStudent.phone,
+          score: score,
+          correct: correct,
+          wrong: wrong,
+          unattempted: unattempted
+        })
+      });
+
+      document.getElementById("test-section").classList.add("hidden");
+      document.getElementById("result-section").classList.remove("hidden");
+    }
+
+    function enablePreview() {
+      document.getElementById("result-section").classList.add("hidden");
+      document.getElementById("test-section").classList.remove("hidden");
+      document.body.classList.add("preview-mode");
+
+      // Hide the Submit Test button completely during preview/download
+      document.getElementById("submit-btn").style.display = "none";
+
+      questions.forEach(q => {
+        const selected = document.querySelector(`input[name="q_${q.id}"]:checked`);
+        const correctLabel = document.getElementById(`lbl-${q.id}-${q.ans}`);
+        
+        if (correctLabel) {
+          correctLabel.classList.add("correct-ans");
+        }
+
+        if (selected && selected.value !== q.ans) {
+          const wrongLabel = document.getElementById(`lbl-${q.id}-${selected.value}`);
+          if (wrongLabel) {
+            wrongLabel.classList.add("wrong-ans");
+          }
+        }
+        
+        // Disable choices in preview mode
+        const inputs = document.querySelectorAll(`input[name="q_${q.id}"]`);
+        inputs.forEach(i => i.disabled = true);
+      });
+    }
+  </script>
+</body>
+</html>
