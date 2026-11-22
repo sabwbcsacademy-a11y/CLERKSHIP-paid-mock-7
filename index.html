@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>MM WBCS ACADEMY 9732974125 WBPSC CLERKSHIP ONLINE MOCK TEST 7</title>
+  <title>MM WBCS ACADEMY 9732974125 WBPSC-CLERKSHIP ONLINE MOCK TEST 7</title>
   <style>
     :root {
       --primary: #1a73e8;
@@ -177,7 +177,7 @@
 <body>
 
   <header>
-    <h1>MM WBCS ACADEMY 9732974125 WBPSC CLERKSHIP ONLINE MOCK TEST 7</h1>
+    <h1>MM WBCS ACADEMY 9732974125 WBPSC-CLERKSHIP ONLINE MOCK TEST 7</h1>
   </header>
 
   <!-- Login Section -->
@@ -199,7 +199,7 @@
   <div id="test-section" class="hidden">
     <div class="timer-bar no-print">
       <span id="user-display"></span>
-      <span>Time Remaining: <span id="timer">50:00</span></span>
+      <span>Time Remaining: <span id="timer">90:00</span></span>
     </div>
     <div class="container">
       <div id="preview-banner" class="preview-header-banner">
@@ -220,7 +220,7 @@
       <table class="summary-table">
         <tr><th>Student Name</th><td id="res-name"></td></tr>
         <tr><th>Mobile Number</th><td id="res-phone"></td></tr>
-        <tr><th>Total Questions</th><td id="res-total"></td></tr>
+        <tr><th>Total Questions</th><td>100</td></tr>
         <tr><th>Correct Answers (+1)</th><td id="res-correct" style="color: green; font-weight: bold;"></td></tr>
         <tr><th>Wrong Answers (-0.25)</th><td id="res-wrong" style="color: red; font-weight: bold;"></td></tr>
         <tr><th>Unattempted</th><td id="res-unattempted"></td></tr>
@@ -235,61 +235,111 @@
     const APP_SCRIPT_URL = "https://script.google.com/macros/s/AKfycbxIdnc4bxTmWzN3P4vhJW5JP3OBeaLAwOLU-ByTbHAxZCdJ2bXTLG8BR37h6-OpJyQo/exec";
 
     const questions = [
-      { id: 1, q: "শিশুর বিকাশের ক্ষেত্রে “বিকাশের পূর্বানুমেয় ধারা” বলতে কী বোঝায়?", options: ["A. সব শিশু একই সময়ে একই দক্ষতা অর্জন করে", "B. বিকাশের কিছু সাধারণ ক্রম ও ধারা লক্ষ্য করা যায়", "C. বিকাশ শুধুমাত্র বংশগতির দ্বারা নির্ধারিত হয়", "D. বিকাশ শুধুমাত্র বিদ্যালয়ে ঘটে"], ans: "B" },
-      { id: 2, q: "একটি শিশুর ভাষাগত বিকাশ দ্রুত হলেও তার সামাজিক দক্ষতা তুলনামূলকভাবে ধীরে বিকশিত হচ্ছে। এটি কী নির্দেশ করে?", options: ["A. বিকাশের সব ক্ষেত্র একই গতিতে ঘটে", "B. বিকাশের বিভিন্ন ক্ষেত্রের গতি ভিন্ন হতে পারে", "C. শিশুটির কোনো বিকাশ ঘটছে না", "D. ভাষা বিকাশ সামাজিক বিকাশকে সম্পূর্ণভাবে নির্ধারণ করে"], ans: "B" },
-      { id: 3, q: "একজন শিশু বাড়িতে বড়দের সঙ্গে কথা বলার সময় ভদ্রভাবে মত প্রকাশ করতে শেখে এবং পরে বিদ্যালয়ে একই আচরণ করে। এটি কোন ধারণার উদাহরণ?", options: ["A. সামাজিকীকরণের স্থানান্তর", "B. শারীরিক পরিপক্বতা", "C. Classical conditioning", "D. Cognitive conflict"], ans: "A" },
-      { id: 4, q: "সহপাঠীদের সঙ্গে দলগত খেলায় অংশগ্রহণের মাধ্যমে শিশু প্রধানত কী শিখতে পারে?", options: ["A. শুধুমাত্র তথ্য মুখস্থ করা", "B. সহযোগিতা, নিয়ম মেনে চলা ও পারস্পরিক সম্পর্ক", "C. শুধুমাত্র শারীরিক বৃদ্ধি", "D. শুধুমাত্র লিখন দক্ষতা"], ans: "B" },
-      { id: 5, q: "Behaviorism-এর দৃষ্টিভঙ্গিতে শিক্ষক কোনো কাঙ্ক্ষিত আচরণের পর সঙ্গে সঙ্গে প্রশংসা করলে তার উদ্দেশ্য কী?", options: ["A. আচরণকে দুর্বল করা", "B. কাঙ্ক্ষিত আচরণের পুনরাবৃত্তির সম্ভাবনা বৃদ্ধি করা", "C. শিক্ষার্থীর পূর্বজ্ঞান মুছে ফেলা", "D. শিক্ষার্থীর চিন্তন বন্ধ করা"], ans: "B" },
-      { id: 6, q: "Cognitivism অনুযায়ী কোনো শিক্ষার্থী নতুন তথ্যকে পূর্বে শেখা তথ্যের সঙ্গে সম্পর্কিত করে মনে রাখছে। এখানে কোন প্রক্রিয়াটি গুরুত্বপূর্ণ?", options: ["A. তথ্যের মানসিক সংগঠন", "B. শুধুমাত্র শারীরিক অনুকরণ", "C. শুধুমাত্র পুরস্কার", "D. শুধুমাত্র শাস্তি"], ans: "A" },
-      { id: 7, q: "একজন শিক্ষক একটি সমস্যার সরাসরি উত্তর না দিয়ে শিক্ষার্থীদের পূর্বজ্ঞান ব্যবহার করে বিভিন্ন সম্ভাব্য সমাধান খুঁজতে দেন। এটি কোন পদ্ধতির উদাহরণ?", options: ["A. Behaviorism", "B. Constructivism", "C. Classical conditioning", "D. Maturationism"], ans: "B" },
-      { id: 8, q: "পিয়াজের মতে, একটি শিশু যদি বুঝতে পারে যে একটি কাঠির দৈর্ঘ্য তার অবস্থান পরিবর্তন করলেও একই থাকে, তবে এটি কোন ধারণার সঙ্গে সম্পর্কিত?", options: ["A. Conservation", "B. Egocentrism", "C. Animism", "D. Centration"], ans: "A" },
-      { id: 9, q: "পিয়াজের মতে, formal operational stage-এ শিক্ষার্থীরা কোন ধরনের চিন্তনে সক্ষম হয়?", options: ["A. শুধুমাত্র ইন্দ্রিয়নির্ভর অনুসন্ধান", "B. শুধুমাত্র দৃশ্যমান বস্তুর ওপর নির্ভরশীল চিন্তা", "C. বিমূর্ত ধারণা ও সম্ভাব্য পরিস্থিতি নিয়ে চিন্তা", "D. শুধুমাত্র অনুকরণমূলক শেখা"], ans: "C" },
-      { id: 10, q: "Vygotsky-এর মতে, একজন শিক্ষক যদি শিক্ষার্থীকে প্রথমে যথেষ্ট সহায়তা দেন এবং পরে ধীরে ধীরে সেই সহায়তা প্রত্যাহার করেন, তাহলে এটি কী নির্দেশ করে?", options: ["A. Scaffolding", "B. Punishment", "C. Rote learning", "D. Conditioning"], ans: "A" },
-      { id: 11, q: "Vygotsky-এর মতে, শিশুর চিন্তন বিকাশে ভাষার ভূমিকা বোঝার জন্য কোন বিষয়টি বিশেষ গুরুত্বপূর্ণ?", options: ["A. ভাষা সামাজিক মিথস্ক্রিয়ার মাধ্যমে বিকশিত হয়", "B. ভাষা শুধুমাত্র জৈবিক পরিপক্বতার ফল", "C. ভাষা শেখার জন্য সামাজিক যোগাযোগের প্রয়োজন নেই", "D. ভাষা শুধুমাত্র মুখস্থ করার মাধ্যমে শেখা যায়"], ans: "A" },
-      { id: 12, q: "Kohlberg-এর মতে, কোনো শিশু যদি অন্যদের অনুমোদন পাওয়ার জন্য ভালো আচরণ করে, তবে এটি কোন orientation-এর সঙ্গে সম্পর্কিত?", options: ["A. Punishment and obedience", "B. Instrumental purpose", "C. Good boy–good girl", "D. Universal ethical principle"], ans: "C" },
-      { id: 13, q: "Bandura-এর সামাজিক শিক্ষণ তত্ত্বে “model” বলতে কী বোঝায়?", options: ["A. যে ব্যক্তির আচরণ পর্যবেক্ষণ করে অন্যরা শিখতে পারে", "B. একটি লিখিত পরীক্ষার কাঠামো", "C. একটি শাস্তিমূলক পদ্ধতি", "D. একটি পাঠ্যবই"], ans: "A" },
-      { id: 14, q: "একজন শিক্ষক লক্ষ্য করলেন যে একজন শিক্ষার্থী মৌখিক আলোচনায় ভালো, কিন্তু লিখিত কাজে বেশি সময় নেয়। শিক্ষকের উপযুক্ত দৃষ্টিভঙ্গি কী হওয়া উচিত?", options: ["A. তাকে কম মেধাবী হিসেবে চিহ্নিত করা", "B. individual differences বিবেচনা করা", "C. তাকে সব কার্যক্রম থেকে বাদ দেওয়া", "D. শুধুমাত্র লিখিত পরীক্ষার ওপর নির্ভর করা"], ans: "B" },
-      { id: 15, q: "একজন শিক্ষার্থী স্থানিক বিন্যাস, মানচিত্র ও নকশা বুঝতে বিশেষ দক্ষ। Gardner-এর তত্ত্ব অনুযায়ী এটি কোন intelligence-এর সঙ্গে সম্পর্কিত?", options: ["A. Linguistic intelligence", "B. Spatial intelligence", "C. Musical intelligence", "D. Interpersonal intelligence"], ans: "B" },
-      { id: 16, q: "দৃষ্টিপ্রতিবন্ধী শিক্ষার্থীকে একই পাঠে সক্রিয়ভাবে অংশগ্রহণের সুযোগ দিতে কোন ব্যবস্থা সবচেয়ে উপযুক্ত?", options: ["A. তাকে শ্রেণিকক্ষের বাইরে রাখা", "B. শুধুমাত্র বোর্ডের লেখা পড়তে বলা", "C. শ্রুতিনির্ভর উপকরণ ও accessible learning material ব্যবহার করা", "D. তাকে পরীক্ষায় অংশগ্রহণ না করতে দেওয়া"], ans: "C" },
-      { id: 17, q: "একজন শিক্ষক শিক্ষার্থীদের একটি বাস্তব সমস্যা দেন এবং তাদের নিজেরা প্রশ্ন তৈরি করে সমাধান খুঁজতে বলেন। এই পদ্ধতিতে শিক্ষক প্রধানত কী ভূমিকা পালন করেন?", options: ["A. Controller", "B. Facilitator", "C. Dictator", "D. Passive observer"], ans: "B" },
-      { id: 18, q: "একটি শ্রেণিতে শিক্ষক একই ধারণা বোঝাতে উদাহরণ, আলোচনা, কার্যক্রম ও বাস্তব বস্তু ব্যবহার করেন। এটি কোন নীতিকে সমর্থন করে?", options: ["A. একমাত্রিক শিক্ষণ", "B. বহুমাত্রিক শিক্ষণ", "C. শুধুমাত্র rote learning", "D. শুধুমাত্র lecture method"], ans: "B" },
-      { id: 19, q: "শিক্ষক একটি lesson শেষ করার পর একটি “exit ticket” ব্যবহার করে শিক্ষার্থীরা কী বুঝেছে তা যাচাই করেন। এর প্রধান উদ্দেশ্য কী?", options: ["A. চূড়ান্ত ranking তৈরি করা", "B. শিক্ষার্থীর তাৎক্ষণিক শেখার অবস্থা বোঝা", "C. certificate প্রদান করা", "D. বিদ্যালয়ের ফলাফল প্রকাশ করা"], ans: "B" },
-      { id: 20, q: "একটি শিক্ষার্থী একই ধরনের ভুল বারবার করছে। শিক্ষক তার উত্তরগুলির pattern বিশ্লেষণ করে পরবর্তী lesson পরিকল্পনা করেন। এটি কী ধরনের মূল্যায়ন-ব্যবহারের উদাহরণ?", options: ["A. Diagnostic use of assessment", "B. Summative certification", "C. Norm-referenced ranking", "D. Competitive testing"], ans: "A" },
-      { id: 21, q: "একজন শিক্ষার্থী নিজের পড়াশোনার সময় ব্যবস্থাপনা নিয়ে সমস্যায় রয়েছে। Guidance-এর ক্ষেত্রে শিক্ষক প্রথমে কী করবেন?", options: ["A. তার হয়ে সম্পূর্ণ সময়সূচি তৈরি করে দেবেন", "B. তার সমস্যা ও বর্তমান অভ্যাস বুঝতে সাহায্য করবেন", "C. তাকে শাস্তি দেবেন", "D. অন্য শিক্ষার্থীর সঙ্গে তুলনা করবেন"], ans: "B" },
-      { id: 22, q: "Counseling-এর ক্ষেত্রে “active listening” বলতে কী বোঝায়?", options: ["A. শিক্ষার্থীর কথা না শুনে উপদেশ দেওয়া", "B. মনোযোগ দিয়ে শুনে শিক্ষার্থীর বক্তব্য বোঝার চেষ্টা করা", "C. শুধু লিখিত উত্তর নেওয়া", "D. শিক্ষার্থীর হয়ে সিদ্ধান্ত নেওয়া"], ans: "B" },
-      { id: 23, q: "একজন শিক্ষার্থী কোনো প্রশ্নের উত্তর দেওয়ার আগে নিজের চিন্তার ধাপগুলো পরীক্ষা করে। এটি কোন দক্ষতার উদাহরণ?", options: ["A. Metacognition", "B. Imitation", "C. Conditioning", "D. Rote memory"], ans: "A" },
-      { id: 24, q: "শিক্ষক একটি কাজের জন্য একাধিক গ্রহণযোগ্য সমাধানকে স্বীকৃতি দেন। এই practice কোন দক্ষতার বিকাশে সহায়ক?", options: ["A. Convergent thinking only", "B. Divergent thinking", "C. Mechanical memorisation", "D. Passive learning"], ans: "B" },
-      { id: 25, q: "শিক্ষার্থীদের নিজস্ব অভিজ্ঞতা থেকে উদাহরণ দিতে বললে শিক্ষণ প্রক্রিয়ায় প্রধানত কী ঘটে?", options: ["A. নতুন জ্ঞান পূর্বঅভিজ্ঞতার সঙ্গে যুক্ত হয়", "B. মুখস্থবিদ্যা বাধ্যতামূলক হয়", "C. শিক্ষকই একমাত্র জ্ঞানের উৎস থাকেন", "D. শিক্ষার্থীর অংশগ্রহণ কমে যায়"], ans: "A" },
-      { id: 26, q: "‘মহোৎসব’ শব্দটির সন্ধিবিচ্ছেদ কোনটি?", options: ["A. মহা + উৎসব", "B. মহ + উৎসব", "C. মহৎ + উৎসব", "D. মহো + উৎসব"], ans: "A" },
-      { id: 27, q: "‘কাঁথা’ শব্দটি কোন শ্রেণির শব্দ?", options: ["A. তৎসম", "B. তদ্ভব", "C. বিদেশি", "D. পারিভাষিক"], ans: "B" },
-      { id: 28, q: "‘প্রতিদিন’ শব্দে কোন উপসর্গ ব্যবহৃত হয়েছে?", options: ["A. প্রতি", "B. পরি", "C. প্র", "D. উপ"], ans: "A" },
-      { id: 29, q: "‘লেখক’ শব্দে ‘ক’ কী?", options: ["A. তদ্ধিত প্রত্যয়", "B. কৃৎ প্রত্যয়", "C. উপসর্গ", "D. বিভক্তি"], ans: "B" },
-      { id: 30, q: "‘রাজপথ’ শব্দটির সমাস নির্ণয় করুন।", options: ["A. দ্বন্দ্ব সমাস", "B. ষষ্ঠী তৎপুরুষ সমাস", "C. কর্মধারয় সমাস", "D. বহুব্রীহি সমাস"], ans: "B" },
-      { id: 31, q: "‘রিমা ভাইকে বই দিল’— বাক্যে ‘ভাইকে’ কোন কারক?", options: ["A. কর্তৃকারক", "B. কর্মকারক", "C. সম্প্রদান কারক", "D. অধিকরণ কারক"], ans: "C" },
-      { id: 32, q: "‘পাখি খাঁচা থেকে বেরিয়ে গেল’— বাক্যে ‘খাঁচা থেকে’ কোন কারক?", options: ["A. করণকারক", "B. অপাদান কারক", "C. অধিকরণ কারক", "D. সম্প্রদান কারক"], ans: "B" },
-      { id: 33, q: "‘চিঠিটি ডাকপিয়নের দ্বারা আনা হয়েছে’— বাক্যটি কোন বাচ্যের উদাহরণ?", options: ["A. কর্তৃবাচ্য", "B. কর্মবাচ্য", "C. ভাববাচ্য", "D. কর্তৃ-কর্মবাচ্য"], ans: "B" },
-      { id: 34, q: "‘তারা আগামীকাল প্রতিযোগিতায় অংশ নেবে’— বাক্যটির ক্রিয়ার কাল কী?", options: ["A. সাধারণ বর্তমান", "B. সাধারণ অতীত", "C. সাধারণ ভবিষ্যৎ", "D. ঘটমান বর্তমান"], ans: "C" },
-      { id: 35, q: "‘যদি তুমি মন দিয়ে পড়ো, তবে তুমি সফল হবে’— বাক্যটি কোন ধরনের?", options: ["A. সরল বাক্য", "B. যৌগিক বাক্য", "C. জটিল বাক্য", "D. বিস্ময়সূচক বাক্য"], ans: "C" },
-      { id: 36, q: "বাংলা ভাষা শিক্ষায় শিক্ষার্থীদের ভুলকে বিশ্লেষণ করার প্রধান উদ্দেশ্য কী?", options: ["A. শিক্ষার্থীকে শাস্তি দেওয়া", "B. শিক্ষার্থীর শেখার প্রক্রিয়া ও অসুবিধা বোঝা", "C. শিক্ষার্থীর নম্বর কমানো", "D. মুখস্থবিদ্যা বৃদ্ধি করা"], ans: "B" },
-      { id: 37, q: "একটি বাংলা গল্প পড়ানোর সময় শিক্ষক শিক্ষার্থীদের চরিত্রগুলির সিদ্ধান্ত নিয়ে যুক্তি দিতে বলেন। এই কার্যক্রমটি প্রধানত কোন দক্ষতা বিকাশ করে?", options: ["A. শুধুমাত্র বানান", "B. সমালোচনামূলক চিন্তা ও পাঠ-বোধ", "C. শুধুমাত্র হাতের লেখা", "D. শুধুমাত্র ব্যাকরণ"], ans: "B" },
-      { id: 38, q: "বাংলা ভাষার লেখার দক্ষতা বিকাশে কোন কার্যক্রমটি সবচেয়ে কার্যকর?", options: ["A. শুধু বই থেকে বাক্য নকল করা", "B. নিজের অভিজ্ঞতা নিয়ে ছোট অনুচ্ছেদ লেখা", "C. শুধু ব্যাকরণ মুখস্থ করা", "D. শুধু বানান তালিকা পড়া"], ans: "B" },
-      { id: 39, q: "প্রাথমিক স্তরে বাংলা ভাষা শেখানোর সময় শিক্ষক যদি শিক্ষার্থীদের কথ্য ভাষা থেকে প্রমিত ভাষার দিকে ধীরে ধীরে নিয়ে যান, তাহলে এর প্রধান সুবিধা কী?", options: ["A. শিক্ষার্থীর ভাষাগত অভিজ্ঞতার সঙ্গে নতুন ভাষার যোগসূত্র তৈরি হয়", "B. মাতৃভাষা সম্পূর্ণ নিষিদ্ধ হয়", "C. শুধুমাত্র পরীক্ষামুখী শিক্ষা হয়", "D. শিক্ষার্থীর মৌখিক অংশগ্রহণ কমে যায়"], ans: "A" },
-      { id: 40, q: "একটি কবিতা পড়ানোর আগে শিক্ষক শিক্ষার্থীদের কবিতার শিরোনাম দেখে সম্ভাব্য বিষয় অনুমান করতে বলেন। এটি কোন শিক্ষণ কৌশলের উদাহরণ?", options: ["A. Prediction", "B. Dictation", "C. Copying", "D. Rote memorisation"], ans: "A" },
-      { id: 41, q: "Choose the synonym of “Diligent”.", options: ["A. Lazy", "B. Industrious", "C. Careless", "D. Negligent"], ans: "B" },
-      { id: 42, q: "Choose the antonym of “Fragile”.", options: ["A. Delicate", "B. Weak", "C. Sturdy", "D. Breakable"], ans: "C" },
-      { id: 43, q: "Choose the correct one-word substitution for “A person who cannot read or write”.", options: ["A. Literate", "B. Illiterate", "C. Scholar", "D. Graduate"], ans: "B" },
-      { id: 44, q: "Choose the correct meaning of the phrasal verb “carry out”.", options: ["A. To cancel", "B. To perform or complete", "C. To postpone", "D. To hide"], ans: "B" },
-      { id: 45, q: "Choose the correct meaning of the idiom “Break the ice”.", options: ["A. To create a serious problem", "B. To start a friendly conversation", "C. To end a relationship", "D. To avoid communication"], ans: "B" },
-      { id: 46, q: "Identify the error in the sentence: “Neither of the answers are correct.”", options: ["A. Neither", "B. answers", "C. are", "D. correct"], ans: "C" },
-      { id: 47, q: "Choose the correct improvement: “She is capable to solve the problem.”", options: ["A. She is capable of solving the problem.", "B. She is capable for solve the problem.", "C. She is capable to solving the problem.", "D. She is capable with solving the problem."], ans: "A" },
-      { id: 48, q: "Fill in the blank: “The students were divided ___ four groups.”", options: ["A. in", "B. into", "C. by", "D. with"], ans: "B" },
-      { id: 49, q: "Choose the correct sentence for an English classroom where the teacher wants learners to use language meaningfully.", options: ["A. Learners only memorise word lists.", "B. Learners complete a real-life information exchange using English.", "C. Learners copy the same paragraph repeatedly.", "D. Learners translate every sentence mechanically."], ans: "B" },
-      { id: 50, q: "A teacher gives learners a short text and asks them to identify the writer’s implied message. This activity mainly assesses:", options: ["A. Inferential reading", "B. Handwriting", "C. Spelling only", "D. Pronunciation only"], ans: "A" }
+      { id: 1, q: "কলিঙ্গ যুদ্ধের পর সম্রাট অশোক কোন ধর্ম গ্রহণ করেছিলেন?", options: ["A. জৈনধর্ম", "B. বৌদ্ধধর্ম", "C. শৈবধর্ম", "D. বৈষ্ণবধর্ম"], ans: "B" },
+      { id: 2, q: "দিল্লি সুলতানির কোন শাসক বাজারদর নিয়ন্ত্রণ ব্যবস্থা চালু করেছিলেন?", options: ["A. ইলতুৎমিশ", "B. বলবন", "C. আলাউদ্দিন খলজি", "D. ফিরোজ শাহ তুঘলক"], ans: "C" },
+      { id: 3, q: "ইলবার্ট বিল বিতর্ক কোন ভাইসরয়ের শাসনকালে সংঘটিত হয়েছিল?", options: ["A. লর্ড কার্জন", "B. লর্ড রিপন", "C. লর্ড লিটন", "D. লর্ড ডালহৌসি"], ans: "B" },
+      { id: 4, q: "1916 সালে হোম রুল আন্দোলন শুরু করেছিলেন কে?", options: ["A. বাল গঙ্গাধর তিলক ও অ্যানি বেসান্ত", "B. মহাত্মা গান্ধী ও জওহরলাল নেহরু", "C. সুভাষচন্দ্র বসু ও রাসবিহারী বসু", "D. লালা লাজপত রায় ও বিপিনচন্দ্র পাল"], ans: "A" },
+      { id: 5, q: "কাকোরি ষড়যন্ত্র মামলাটি কোন সালে সংঘটিত হয়েছিল?", options: ["A. 1922", "B. 1925", "C. 1928", "D. 1930"], ans: "B" },
+      { id: 6, q: "গান্ধিজি ডান্ডি অভিযান শুরু করেছিলেন কোথা থেকে?", options: ["A. ওয়ার্ধা আশ্রম", "B. সাবরমতী আশ্রম", "C. সেবাগ্রাম আশ্রম", "D. চম্পারণ"], ans: "B" },
+      { id: 7, q: "নর্মদা নদী কোন ধরনের উপত্যকার মধ্য দিয়ে প্রবাহিত হয়েছে?", options: ["A. হিমবাহ উপত্যকা", "B. রিফট উপত্যকা", "C. বদ্বীপ উপত্যকা", "D. উপকূলীয় উপত্যকা"], ans: "B" },
+      { id: 8, q: "ভারতের কৃষ্ণ মৃত্তিকা প্রধানত কোন ফসল উৎপাদনের জন্য উপযোগী?", options: ["A. চা", "B. পাট", "C. তুলা", "D. ধান"], ans: "C" },
+      { id: 9, q: "পশ্চিমবঙ্গের অযোধ্যা পাহাড় কোন জেলায় অবস্থিত?", options: ["A. বাঁকুড়া", "B. পুরুলিয়া", "C. ঝাড়গ্রাম", "D. পশ্চিম বর্ধমান"], ans: "B" },
+      { id: 10, q: "কোন রক্তকণিকা প্রধানত অ্যান্টিবডি উৎপাদনের সঙ্গে যুক্ত?", options: ["A) RBC", "B) Platelets", "C) B-lymphocytes", "D) Neutrophils"], ans: "C" },
+      { id: 11, q: "ময়ূরাক্ষী নদী কোন নদীর উপনদী?", options: ["A. গঙ্গা", "B. দামোদর", "C. ভাগীরথী", "D. তিস্তা"], ans: "C" },
+      { id: 12, q: "সংবিধানের কোন অনুচ্ছেদ অনুযায়ী সুপ্রিম কোর্ট মৌলিক অধিকার রক্ষার জন্য রিট জারি করতে পারে?", options: ["A) 32", "B) 136", "C) 226", "D) 368"], ans: "A" },
+      { id: 13, q: "ভারতের সংবিধানের কোন তফসিলে রাজ্যগুলির নাম ও তাদের ভূখণ্ড উল্লেখ রয়েছে?", options: ["A) প্রথম", "B) দ্বিতীয়", "C) তৃতীয়", "D) চতুর্থ"], ans: "A" },
+      { id: 14, q: "পঞ্চায়েতি রাজ ব্যবস্থাকে সাংবিধানিক মর্যাদা দিয়েছিল কোন সংশোধনী?", options: ["A. 42তম", "B. 44তম", "C. 73তম", "D. 74তম"], ans: "C" },
+      { id: 15, q: "দলত্যাগ বিরোধী আইন সংবিধানের কোন তফসিলে রয়েছে?", options: ["A. অষ্টম তফসিল", "B. নবম তফসিল", "C. দশম তফসিল", "D. একাদশ তফসিল"], ans: "C" },
+      { id: 16, q: "অর্থবিল (Money Bill) প্রথমে কোথায় উত্থাপন করা যায়?", options: ["A. রাজ্যসভা", "B. লোকসভা", "C. সুপ্রিম কোর্ট", "D. যেকোনো কক্ষে"], ans: "B" },
+      { id: 17, q: "‘Permanent Settlement’ বাংলায় কোন সালে প্রবর্তিত হয়?", options: ["A) 1773", "B) 1784", "C) 1793", "D) 1802"], ans: "C" },
+      { id: 18, q: "ভারতের পুঁজিবাজার নিয়ন্ত্রণকারী সংস্থা কোনটি?", options: ["A. RBI", "B. NABARD", "C. SEBI", "D. SIDBI"], ans: "C" },
+      { id: 19, q: "Balance of Payments বলতে কী বোঝায়?", options: ["A. সরকারের মোট আয় ও ব্যয়ের হিসাব", "B. একটি দেশের সঙ্গে অন্যান্য দেশের অর্থনৈতিক লেনদেনের হিসাব", "C. দেশের মোট উৎপাদনের হিসাব", "D. ব্যাংকের আমানতের হিসাব"], ans: "B" },
+      { id: 20, q: "সরকারি সংস্থার মালিকানাধীন শেয়ার বেসরকারি বিনিয়োগকারীদের কাছে বিক্রি করাকে কী বলে?", options: ["A. জাতীয়করণ", "B. বেসরকারিকরণ", "C. মুদ্রাস্ফীতি", "D. অবমূল্যায়ন"], ans: "B" },
+      { id: 21, q: "ডেভিস কাপ কোন খেলার সঙ্গে সম্পর্কিত?", options: ["A. ফুটবল", "B. টেনিস", "C. হকি", "D. ব্যাডমিন্টন"], ans: "B" },
+      { id: 22, q: "মানুষের দেহে কোন গ্রন্থি ‘Master Gland’ নামে পরিচিত?", options: ["A) থাইরয়েড", "B) পিটুইটারি", "C) অ্যাড্রিনাল", "D) পাইনিয়াল"], ans: "B" },
+      { id: 23, q: "‘গোরা’ উপন্যাসের রচয়িতা কে?", options: ["A. বঙ্কিমচন্দ্র চট্টোপাধ্যায়", "B. শরৎচন্দ্র চট্টোপাধ্যায়", "C. রবীন্দ্রনাথ ঠাকুর", "D. তারাশঙ্কর বন্দ্যোপাধ্যায়"], ans: "C" },
+      { id: 24, q: "মধুবনী চিত্রকলা ভারতের কোন রাজ্যের ঐতিহ্যবাহী শিল্প?", options: ["A. বিহার", "B. রাজস্থান", "C. গুজরাট", "D. পাঞ্জাব"], ans: "A" },
+      { id: 25, q: "‘রামানুজন সংখ্যা’ বলতে কোন সংখ্যাকে বোঝায়?", options: ["A. 1001", "B. 1729", "C. 2025", "D. 4096"], ans: "B" },
+      { id: 26, q: "কম্পিউটারের স্থায়ী নির্দেশাবলি সংরক্ষণের জন্য সাধারণত কোন মেমরি ব্যবহৃত হয়?", options: ["A. RAM", "B. ROM", "C. Cache", "D. Register"], ans: "B" },
+      { id: 27, q: "ভারতের প্রথম মহিলা মুখ্যমন্ত্রী কে ছিলেন?", options: ["A. সরোজিনী নাইডু", "B. সুচেতা কৃপালনী", "C. বিজয়লক্ষ্মী পণ্ডিত", "D. ইন্দিরা গান্ধী"], ans: "B" },
+      { id: 28, q: "‘সুকন্যা সমৃদ্ধি যোজনা’ মূলত কাদের জন্য চালু করা হয়েছে?", options: ["A. প্রবীণ নাগরিক", "B. কন্যাশিশু", "C. কৃষক", "D. ক্ষুদ্র ব্যবসায়ী"], ans: "B" },
+      { id: 29, q: "দাদাসাহেব ফালকে পুরস্কার কোন ক্ষেত্রে দেওয়া হয়?", options: ["A. সাহিত্য", "B. চলচ্চিত্র", "C. ক্রীড়া", "D. বিজ্ঞান"], ans: "B" },
+      { id: 30, q: "আন্তর্জাতিক যোগ দিবস কবে পালিত হয়?", options: ["A. 5 জুন", "B. 11 জুলাই", "C. 21 জুন", "D. 29 আগস্ট"], ans: "C" },
+      { id: 31, q: "শব্দের তীব্রতা পরিমাপের একক কী?", options: ["A. হার্টজ", "B. ডেসিবেল", "C. নিউটন", "D. জুল"], ans: "B" },
+      { id: 32, q: "আলোর বেগ শূন্যস্থানে প্রায় কত?", options: ["A. 3 × 10⁶ মিটার/সেকেন্ড", "B. 3 × 10⁸ মিটার/সেকেন্ড", "C. 3 × 10¹⁰ মিটার/সেকেন্ড", "D. 3 × 10⁵ মিটার/সেকেন্ড"], ans: "B" },
+      { id: 33, q: "ব্লিচিং পাউডারের রাসায়নিক সংকেত কোনটি?", options: ["A. CaOCl₂", "B. NaCl", "C. CaCO₃", "D. Na₂CO₃"], ans: "A" },
+      { id: 34, q: "বিশুদ্ধ জলের pH মান কত?", options: ["A. 5", "B. 6", "C. 7", "D. 8"], ans: "C" },
+      { id: 35, q: "মানবদেহে ইনসুলিন হরমোন কোন অঙ্গ থেকে নিঃসৃত হয়?", options: ["A. যকৃৎ", "B. অগ্ন্যাশয়", "C. বৃক্ক", "D. থাইরয়েড"], ans: "B" },
+      { id: 36, q: "মানুষের রক্তে অক্সিজেন পরিবহন করে কোন উপাদান?", options: ["A. প্লেটলেট", "B. হিমোগ্লোবিন", "C. প্লাজমা", "D. শ্বেত রক্তকণিকা"], ans: "B" },
+      { id: 37, q: "ওজোন স্তর বায়ুমণ্ডলের কোন স্তরে অবস্থিত?", options: ["A. ট্রপোস্ফিয়ার", "B. স্ট্র্যাটোস্ফিয়ার", "C. মেসোস্ফিয়ার", "D. থার্মোস্ফিয়ার"], ans: "B" },
+      { id: 38, q: "অ্যাসিড বৃষ্টির প্রধান কারণ কোন গ্যাসগুলির নির্গমন?", options: ["A. অক্সিজেন ও হাইড্রোজেন", "B. সালফার ডাই-অক্সাইড ও নাইট্রোজেন অক্সাইড", "C. কার্বন মনোক্সাইড ও মিথেন", "D. হিলিয়াম ও আর্গন"], ans: "B" },
+      { id: 39, q: "কোনো বাস্তুতন্ত্রে খাদ্যশৃঙ্খলের প্রথম পুষ্টিস্তর গঠন করে কারা?", options: ["A. তৃণভোজী প্রাণী", "B. মাংসাশী প্রাণী", "C. উৎপাদক", "D. বিয়োজক"], ans: "C" },
+      { id: 40, q: "জীববৈচিত্র্য সংরক্ষণের জন্য জীবকে তার প্রাকৃতিক বাসস্থানের বাইরে সংরক্ষণ করাকে কী বলে?", options: ["A. In-situ conservation", "B. Ex-situ conservation", "C. Natural selection", "D. Ecological succession"], ans: "B" },
+      { id: 41, q: "ভারতীয় নৌবাহিনীর পঞ্চম উপকূলীয় প্রতিরক্ষা মহড়া ‘Sea Vigil-26’ কোন সংস্থা পরিচালনা করছে?", options: ["A. ভারতীয় সেনাবাহিনী", "B. ভারতীয় নৌবাহিনী", "C. ভারতীয় বায়ুসেনা", "D. উপকূলরক্ষী বাহিনী"], ans: "B" },
+      { id: 42, q: "ভারতের নির্বাচন কমিশনের গঠন সম্পর্কিত বিধান কোন অনুচ্ছেদে রয়েছে?", options: ["A) 280", "B) 312", "C) 324", "D) 356"], ans: "C" },
+      { id: 43, q: "2026 সালে পরিসংখ্যান ব্যবস্থার উন্নতির জন্য MoSPI কোন প্রকল্প অনুমোদন করেছে?", options: ["A. VISTAR", "B. PM GATI SHAKTI", "C. SVAMITVA", "D. PM-KUSUM"], ans: "A" },
+      { id: 44, q: "‘NABARD’ প্রধানত কোন ক্ষেত্রের উন্নয়নের সঙ্গে যুক্ত?", options: ["A) শিল্প", "B) কৃষি ও গ্রামীণ উন্নয়ন", "C) বৈদেশিক বাণিজ্য", "D) নগর পরিবহণ"], ans: "B" },
+      { id: 45, q: "Swachh Survekshan 2025-26-এর Super Swachh League-এ প্রথম স্থান অধিকার করেছে কোন শহর?", options: ["A. ইন্দোর", "B. নবি মুম্বই", "C. সুরাট", "D. ভোপাল"], ans: "B" },
+      { id: 46, q: "2026 সালের নভেম্বরে প্রকাশিত তথ্য অনুযায়ী, EKA-1 নামে ভারতীয় AI মডেলটি কত বিলিয়ন প্যারামিটার নিয়ে তৈরি?", options: ["A. 7 বিলিয়ন", "B. 13 বিলিয়ন", "C. 26.3 বিলিয়ন", "D. 50 বিলিয়ন"], ans: "C" },
+      { id: 47, q: "QS Asia University Rankings 2027-এ ভারতের সর্বোচ্চ স্থানপ্রাপ্ত প্রতিষ্ঠান কোনটি?", options: ["A. IIT Bombay", "B. IIT Delhi", "C. IISc Bengaluru", "D. IIT Madras"], ans: "B" },
+      { id: 48, q: "2026 Commonwealth Youth AI Readiness Index-এ ভারতের স্থান কত?", options: ["A. 5ম", "B. 8ম", "C. 11তম", "D. 15তম"], ans: "C" },
+      { id: 49, q: "2026 সালের নভেম্বরে ভারতের প্রথম বেসরকারি মহাকাশ-বর্জ্য ব্যবস্থাপনা কেন্দ্র ‘Base 1’ কোথায় চালু হয়?", options: ["A. বেঙ্গালুরু", "B. হায়দরাবাদ", "C. চেন্নাই", "D. আহমেদাবাদ"], ans: "B" },
+      { id: 50, q: "2026 সালের নভেম্বরে ভারতীয় নৌবাহিনীর ‘Naseem Al Bahr’ মহড়া কোন দেশের নৌবাহিনীর সঙ্গে অনুষ্ঠিত হয়?", options: ["A. ওমান", "B. জাপান", "C. ফ্রান্স", "D. অস্ট্রেলিয়া"], ans: "A" },
+      { id: 51, q: "কোন বৃহত্তম সংখ্যা দ্বারা 1356, 1868 এবং 2764-কে ভাগ করলে প্রত্যেক ক্ষেত্রে 12 অবশিষ্ট থাকবে?", options: ["(A) 64", "(B) 124", "(C) 156", "(D) 260"], ans: "A" },
+      { id: 52, q: "সকাল 9টা থেকে 10টার মধ্যে ঘড়ির ঘণ্টা ও মিনিটের কাঁটা কখন একসঙ্গে মিলিত হবে?", options: ["(A) 9টা বেজে 45 মিনিটে", "(B) 9টা বেজে 50 মিনিটে", "(C) 9টা বেজে 49 ¹/₁₁ মিনিটে", "(D) 9টা বেজে 48 ²/₁₁ মিনিটে"], ans: "C" },
+      { id: 53, q: "দুধ ও জলের একটি মিশ্রণে ওজনের হিসাবে জলের পরিমাণ 75%। 60 গ্রাম মিশ্রণে আরও 15 গ্রাম জল যোগ করলে মিশ্রণে জলের শতকরা পরিমাণ কত হবে?", options: ["(A) 75%", "(B) 88%", "(C) 90%", "(D) 80%"], ans: "D" },
+      { id: 54, q: "রুমা ঘণ্টায় গড়ে 30 পৃষ্ঠা পড়তে পারে এবং নীরা ঘণ্টায় গড়ে 40 পৃষ্ঠা পড়তে পারে। রুমা দুপুর 2:30-এ একটি উপন্যাস পড়া শুরু করে এবং নীরা একই বইয়ের আরেকটি কপি বিকেল 3:20-এ পড়া শুরু করে। তারা কখন একই পৃষ্ঠায় পৌঁছাবে?", options: ["(A) বিকেল 5:00", "(B) বিকেল 5:50", "(C) সন্ধ্যা 6:40", "(D) সন্ধ্যা 7:00"], ans: "B" },
+      { id: 55, q: "একজন মায়ের বর্তমান বয়স তাঁর মেয়ের বয়সের 4 গুণ। 6 বছর পর মায়ের বয়স মেয়ের বয়সের 3 গুণ হবে। মেয়ের বর্তমান বয়স কত?", options: ["A. 10 বছর", "B. 12 বছর", "C. 14 বছর", "D. 16 বছর"], ans: "B" },
+      { id: 56, q: "নিচের সংখ্যাগুলির মধ্যে কোনটি অন্যগুলির থেকে আলাদা?\n324, 441, 289, 326", options: ["(A) 324", "(B) 441", "(C) 289", "(D) 326"], ans: "D" },
+      { id: 57, q: "একটি পাইপ 8 ঘণ্টায় এবং অন্য একটি পাইপ 12 ঘণ্টায় একটি ট্যাঙ্ক পূর্ণ করতে পারে। একটি ছিদ্রপূর্ণ পাইপ পূর্ণ ট্যাঙ্কটি 24 ঘণ্টায় খালি করতে পারে। তিনটি পাইপ একসঙ্গে খুললে ট্যাঙ্কটি কত ঘণ্টায় পূর্ণ হবে?", options: ["A. 5 ঘণ্টা", "B. 6 ঘণ্টা", "C. 7 ঘণ্টা", "D. 8 ঘণ্টা"], ans: "B" },
+      { id: 58, q: "কমলালেবুর দাম 12½% কমে যাওয়ায় একজন ক্রেতা 6 টাকায় আগের তুলনায় 2টি বেশি কমলালেবু কিনতে পারেন। 12টি কমলালেবুর হ্রাসকৃত মূল্য কত?", options: ["(A) 4.50 টাকা", "(B) 5 টাকা", "(C) 3.50 টাকা", "(D) 5.50 টাকা"], ans: "A" },
+      { id: 59, q: "একটি বিদ্যালয়ের ছাত্রদের 15, 18 অথবা 24 জনের সমান সারিতে সাজানো যায় এবং তাদের একটি পূর্ণবর্গ আকারেও সাজানো যায়। বিদ্যালয়ে ন্যূনতম কতজন ছাত্র রয়েছে?", options: ["(A) 4900", "(B) 2500", "(C) 3600", "(D) 6400"], ans: "C" },
+      { id: 60, q: "7, 11, 19, 35, 67, ?", options: ["(A) 99", "(B) 134", "(C) 98", "(D) 131"], ans: "D" },
+      { id: 61, q: "160 মিটার ও 240 মিটার দীর্ঘ দুটি ট্রেন একই দিকে যথাক্রমে 72 কিমি/ঘণ্টা ও 54 কিমি/ঘণ্টা বেগে চলছে। দ্রুতগামী ট্রেনটি ধীরগতির ট্রেনটিকে কত সেকেন্ডে অতিক্রম করবে?", options: ["A. 60 সেকেন্ড", "B. 70 সেকেন্ড", "C. 80 সেকেন্ড", "D. 90 সেকেন্ড"], ans: "C" },
+      { id: 62, q: "দুটি সংখ্যার গুণফল 4,332 এবং তাদের ভাগফল 3/4। সংখ্যা দুটির যোগফল নির্ণয় করো।", options: ["(A) 136", "(B) 133", "(C) 143", "(D) 149"], ans: "B" },
+      { id: 63, q: "একটি পণ্য 1870 টাকায় বিক্রি করে 15% ক্ষতি হয়। পণ্যটির ক্রয়মূল্য কত?", options: ["A. 2100 টাকা", "B. 2150 টাকা", "C. 2200 টাকা", "D. 2250 টাকা"], ans: "C" },
+      { id: 64, q: "12 জন ব্যক্তির মধ্যে প্রথম 11 জনের গড় ওজন 95 কেজি। 12তম ব্যক্তির ওজন 12 জনের গড় ওজনের চেয়ে 33 কেজি বেশি। 12তম ব্যক্তির ওজন কত?", options: ["(A) 128 কেজি", "(B) 97.45 কেজি", "(C) 128.75 কেজি", "(D) 131 কেজি"], ans: "D" },
+      { id: 65, q: "720-এর 35% এবং 480-এর 15%-এর যোগফল কত?", options: ["A. 314", "B. 324", "C. 334", "D. 344"], ans: "B" },
+      { id: 66, q: "কোনো পণ্যের দাম 20% কমে গেলে একই পরিমাণ অর্থ ব্যয় করতে ওই পণ্যের ব্যবহার কত শতাংশ বাড়াতে হবে?", options: ["A. 20%", "B. 25%", "C. 30%", "D. 35%"], ans: "B" },
+      { id: 67, q: "একটি শ্রেণিতে 40 জন শিক্ষার্থী রয়েছে। মোট শিক্ষার্থীর ⅕ অংশ শুধুমাত্র ভাত খেতে পছন্দ করে, ⅖ অংশ শুধুমাত্র রুটি খেতে পছন্দ করে এবং বাকিরা ভাত ও রুটি উভয়ই খেতে পছন্দ করে। মোট শিক্ষার্থীর কত অংশ ভাত ও রুটি উভয়ই খেতে পছন্দ করে?", options: ["(A) ⅕", "(B) ⅗", "(C) ⅖", "(D) কোনোটিই নয়"], ans: "C" },
+      { id: 68, q: "একটি বিদ্যালয়ের একটি শ্রেণির একদল ছাত্র মোট 9,216 টাকা সংগ্রহ করল। প্রত্যেক ছাত্রের প্রদত্ত টাকার পরিমাণ ওই শ্রেণির মোট ছাত্রসংখ্যার সমান। শ্রেণিতে মোট কতজন ছাত্র রয়েছে?", options: ["(A) 66", "(B) 48", "(C) 96", "(D) 36"], ans: "C" },
+      { id: 69, q: "A, B ও C যথাক্রমে 9000 টাকা, 12000 টাকা ও 15000 টাকা বিনিয়োগ করে 12 মাস, 9 মাস ও 6 মাসের জন্য ব্যবসা শুরু করল। মোট লাভ 17,000 টাকা হলে C-এর লাভের অংশ কত?", options: ["A. 4000 টাকা", "B. 4500 টাকা", "C. 5000 টাকা", "D. 6000 টাকা"], ans: "C" },
+      { id: 70, q: "12,500 টাকার উপর বার্ষিক 6% সরল সুদে 4 বছরে সুদের পরিমাণ কত?", options: ["A. 2500 টাকা", "B. 2750 টাকা", "C. 3000 টাকা", "D. 3250 টাকা"], ans: "C" },
+      { id: 71, q: "20,000 টাকার উপর বার্ষিক 10% চক্রবৃদ্ধি সুদে 2 বছরে সুদের পরিমাণ কত?", options: ["A. 4000 টাকা", "B. 4100 টাকা", "C. 4200 টাকা", "D. 4400 টাকা"], ans: "C" },
+      { id: 72, q: "5808-কে কোন ক্ষুদ্রতম সংখ্যা দিয়ে গুণ করলে গুণফল একটি পূর্ণবর্গ সংখ্যা হবে?", options: ["(A) 2", "(B) 3", "(C) 7", "(D) 11"], ans: "B" },
+      { id: 73, q: "45 লিটার দুধ ও জলের মিশ্রণে দুধ ও জলের অনুপাত 7 : 2। এই মিশ্রণে কত লিটার জল মেশালে অনুপাত 7 : 4 হবে?", options: ["A. 5 লিটার", "B. 8 লিটার", "C. 10 লিটার", "D. 12 লিটার"], ans: "C" },
+      { id: 74, q: "40 টাকা ও 60 টাকা প্রতি কেজি দরের চাল কী অনুপাতে মেশালে মিশ্রণের গড় দাম 48 টাকা হবে?", options: ["A. 2 : 3", "B. 3 : 2", "C. 4 : 3", "D. 5 : 3"], ans: "B" },
+      { id: 75, q: "একটি নৌকার স্রোতের অনুকূলে গতিবেগ 18 কিমি/ঘণ্টা এবং প্রতিকূলে গতিবেগ 10 কিমি/ঘণ্টা। স্থির জলে নৌকার গতিবেগ কত?", options: ["A. 12 কিমি/ঘণ্টা", "B. 14 কিমি/ঘণ্টা", "C. 15 কিমি/ঘণ্টা", "D. 16 কিমি/ঘণ্টা"], ans: "B" },
+      { id: 76, q: "Choose the synonym of “CANDID”.", options: ["A. Frank", "B. Cruel", "C. Secretive", "D. Careless"], ans: "A" },
+      { id: 77, q: "Choose the synonym of “EPHEMERAL”.", options: ["A. Permanent", "B. Temporary", "C. Endless", "D. Ancient"], ans: "B" },
+      { id: 78, q: "Choose the correct sentence.", options: ["A) Neither the director nor the employees was present.", "B) Neither the director nor the employees were present.", "C) Neither the employees nor the director were present.", "D) Neither director nor employees has present."], ans: "B" },
+      { id: 79, q: "Choose the synonym of “OSTENTATIOUS”.", options: ["A. Modest", "B. Showy", "C. Simple", "D. Humble"], ans: "B" },
+      { id: 80, q: "Choose the antonym of “EXACERBATE”.", options: ["A. Aggravate", "B. Intensify", "C. Alleviate", "D. Worsen"], ans: "C" },
+      { id: 81, q: "Fill in the blank: The proposal is superior _____ the one submitted previously.", options: ["A) than", "B) from", "C) to", "D) over"], ans: "C" },
+      { id: 82, q: "Fill in the blank: Neither of the two explanations _____ convincing.", options: ["A) are", "B) were", "C) is", "D) have been"], ans: "C" },
+      { id: 83, q: "Choose the antonym of “BENEVOLENT”.", options: ["A. Generous", "B. Kind", "C. Charitable", "D. Malevolent"], ans: "D" },
+      { id: 84, q: "Choose the correct meaning of the idiom “Hit the nail on the head”.", options: ["A. To make a mistake", "B. To say exactly the right thing", "C. To work very hard", "D. To hurt someone"], ans: "B" },
+      { id: 85, q: "Choose the correct meaning of the idiom “Spill the beans”.", options: ["A. To waste food", "B. To reveal a secret", "C. To create confusion", "D. To lose money"], ans: "B" },
+      { id: 86, q: "One who studies birds is called a/an —", options: ["A. Botanist", "B. Ornithologist", "C. Zoologist", "D. Geologist"], ans: "B" },
+      { id: 87, q: "A person who cannot be corrected is called —", options: ["A. Incorrigible", "B. Infallible", "C. Invincible", "D. Inaudible"], ans: "A" },
+      { id: 88, q: "Choose the correctly spelt word.", options: ["A. Accomodate", "B. Acommodate", "C. Accommodate", "D. Acomoddate"], ans: "C" },
+      { id: 89, q: "Choose the correctly spelt word.", options: ["A. Privilege", "B. Priviledge", "C. Privilage", "D. Privelege"], ans: "A" },
+      { id: 90, q: "Choose the grammatically correct sentence.", options: ["A. Neither of the answers are correct.", "B. Neither of the answers is correct.", "C. Neither of the answer are correct.", "D. Neither answers is correct."], ans: "B" },
+      { id: 91, q: "Choose the correct option: Hardly had he reached the station ______ the train left.", options: ["A. than", "B. then", "C. when", "D. while"], ans: "C" },
+      { id: 92, q: "Choose the correct option: No sooner did the teacher enter the classroom ______ the students stood up.", options: ["A. when", "B. than", "C. then", "D. while"], ans: "B" },
+      { id: 93, q: "Choose the correct conditional sentence.", options: ["A. If she worked harder, she will pass.", "B. If she had worked harder, she would have passed.", "C. If she has worked harder, she would pass.", "D. If she would work harder, she passed."], ans: "B" },
+      { id: 94, q: "Identify the error in the sentence: “Each of the boys have submitted their assignments.”", options: ["A. Each of", "B. the boys", "C. have submitted", "D. their assignments"], ans: "C" },
+      { id: 95, q: "Choose the correct sentence.", options: ["A. I prefer tea than coffee.", "B. I prefer tea over than coffee.", "C. I prefer tea to coffee.", "D. I prefer tea from coffee."], ans: "C" },
+      { id: 96, q: "Choose the correct passive voice: “They are building a bridge.”", options: ["A. A bridge was built by them.", "B. A bridge is being built by them.", "C. A bridge has been built by them.", "D. A bridge is built by them."], ans: "B" },
+      { id: 97, q: "Change into indirect speech: He said, “I will help you.”", options: ["A. He said that I will help you.", "B. He said that he would help me.", "C. He told that he will help me.", "D. He says that he would help you."], ans: "B" },
+      { id: 98, q: "Choose the correct word: The school is going to buy some new ______ for the library.", options: ["A. Stationary", "B. Stationery", "C. Stationeries", "D. Stationariness"], ans: "B" },
+      { id: 99, q: "Choose the correct option: There are ______ students in the classroom today than yesterday.", options: ["A. Less", "B. Little", "C. Fewer", "D. Much"], ans: "C" },
+      { id: 100, q: "Choose the correct meaning of the idiom “Break the ice”.", options: ["A. To start a conversation in a social situation", "B. To destroy something", "C. To end a friendship", "D. To become angry"], ans: "A" }
     ];
 
     let currentStudent = { name: "", phone: "" };
     let timerInterval;
-    let timeRemaining = questions.length * 60; // 1 min per question (50 mins)
+    let timeRemaining = 90 * 60; // 90 mins in seconds
 
     async function startExam() {
       const phone = document.getElementById("student-phone").value.trim();
@@ -384,7 +434,6 @@
 
       document.getElementById("res-name").textContent = currentStudent.name;
       document.getElementById("res-phone").textContent = currentStudent.phone;
-      document.getElementById("res-total").textContent = questions.length;
       document.getElementById("res-correct").textContent = correct;
       document.getElementById("res-wrong").textContent = wrong;
       document.getElementById("res-unattempted").textContent = unattempted;
